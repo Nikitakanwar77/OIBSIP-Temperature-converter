@@ -9,7 +9,7 @@ function convert(){
     switch(fromunit){
         case 'C':
             if(tounit === 'F'){
-                converttedvalue=(temprature = 9/5)+32
+                converttedvalue=(temprature * 9/5)+32
                 resultunit = 'F';
             }else if (tounit==='K') {
                    converttedvalue= temprature+273.15;
@@ -25,13 +25,13 @@ function convert(){
 
      case 'F':
         if(tounit === 'C'){
-            converttedvalue=(temprature = 32)+5/9
+            converttedvalue=(temprature- 32)*5/9;
             resultunit = 'C';
         }else if (tounit==='K') {
-               converttedvalue= (temprature = 32)+5/9 +273.15
+               converttedvalue= (temprature - 32)*5/9 +273.15;
                resultunit= 'K';
         }else if (tounit==='R') {
-            converttedvalue= temprature + 459.67
+            converttedvalue= temprature + 459.67;
             resultunit= 'R';
       }else  {
         converttedvalue= temprature;
@@ -41,13 +41,13 @@ function convert(){
 
  case 'K':
     if(tounit === 'C'){
-        converttedvalue=temprature - 273.15
+        converttedvalue= temprature - 273.15
         resultunit = 'C';
     }else if (tounit==='K') {
-           converttedvalue= (temprature )
+           converttedvalue= (temprature - 273.15 )*9/5+32
            resultunit= 'K';
     }else if (tounit==='R') {
-        converttedvalue= temprature+273.15;
+        converttedvalue= temprature * 9/5;
         resultunit= 'R';
   }else  {
     converttedvalue= temprature;
@@ -57,13 +57,13 @@ break;
 
 case 'R':
     if(tounit === 'C'){
-        converttedvalue=(temprature = 9/5)+32
+        converttedvalue=(temprature - 491.67)*5/9;
         resultunit = 'C';
     }else if (tounit==='K') {
-           converttedvalue= temprature+273.15;
+           converttedvalue= temprature - 459.67;
            resultunit= 'K';
     }else if (tounit==='R') {
-        converttedvalue= temprature+273.15;
+        converttedvalue= temprature * 5/9;
         resultunit= 'R';
   }else  {
     converttedvalue= temprature;
