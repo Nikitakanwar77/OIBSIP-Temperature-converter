@@ -1,75 +1,77 @@
 function convert(){
-    var fromunit = document.getElementById('fromunit').value;
-    var tounit = document.getElementById('tounit').value;
-    var temprature = parseFloat(document.getElementById('temprature'.value))
+    var fromUnit = document.getElementById('fromUnit').value;
+    var toUnit = document.getElementById('toUnit').value;
+    var temperature = parseFloat(document.getElementById('temperature').value);
 
-    var converttedvalue;
-    var resultunit;
+    var convertedvalue;
+    var resultUnit;
 
-    switch(fromunit){
+    switch(fromUnit){
         case 'C':
-            if(tounit === 'F'){
-                converttedvalue=(temprature * 9/5)+32
-                resultunit = 'F';
-            }else if (tounit==='K') {
-                   converttedvalue= temprature+273.15;
-                   resultunit= 'K';
-            }else if (tounit==='R') {
-                converttedvalue= temprature+273.15;
-                resultunit= 'R';
+            if(toUnit === 'F'){
+                convertedvalue=(temperature * 9/5)+32
+              resultUnit = 'F';
+            }else if (toUnit==='K') {
+                   convertedvalue= temperature+273.15;
+                 resultUnit= 'K';
+            }else if (toUnit==='R') {
+                convertedvalue= temperature+273.15;
+              resultUnit= 'R';
           }else  {
-            converttedvalue= temprature;
-            resultunit= 'C';
+            convertedvalue= temperature;
+          resultUnit= 'C';
      }
      break;
 
      case 'F':
-        if(tounit === 'C'){
-            converttedvalue=(temprature- 32)*5/9;
-            resultunit = 'C';
-        }else if (tounit==='K') {
-               converttedvalue= (temprature - 32)*5/9 +273.15;
-               resultunit= 'K';
-        }else if (tounit==='R') {
-            converttedvalue= temprature + 459.67;
-            resultunit= 'R';
+        if(toUnit === 'C'){
+            convertedvalue=(temperature- 32)*5/9;
+          resultUnit = 'C';
+        }else if (toUnit==='K') {
+               convertedvalue= (temperature - 32)*5/9 +273.15;
+             resultUnit= 'K';
+        }else if (toUnit==='R') {
+            convertedvalue= temperature + 459.67;
+          resultUnit= 'R';
       }else  {
-        converttedvalue= temprature;
-        resultunit= 'F';
+        convertedvalue= temperature;
+      resultUnit= 'F';
  } 
  break;
 
  case 'K':
-    if(tounit === 'C'){
-        converttedvalue= temprature - 273.15
-        resultunit = 'C';
-    }else if (tounit==='K') {
-           converttedvalue= (temprature - 273.15 )*9/5+32
-           resultunit= 'K';
-    }else if (tounit==='R') {
-        converttedvalue= temprature * 9/5;
-        resultunit= 'R';
+    if(toUnit === 'C'){
+        convertedvalue= temperature - 273.15;
+      resultUnit = 'C';
+    }else if (toUnit==='K') {
+           convertedvalue= (temperature - 273.15 )*9/5+32;
+         resultUnit= 'K';
+    }else if (toUnit==='R') {
+        convertedvalue= temperature * 9/5;
+      resultUnit= 'R';
   }else  {
-    converttedvalue= temprature;
-    resultunit= 'K';
+    convertedvalue= temperature;
+  resultUnit= 'K';
 }
 break;
 
 case 'R':
-    if(tounit === 'C'){
-        converttedvalue=(temprature - 491.67)*5/9;
-        resultunit = 'C';
-    }else if (tounit==='K') {
-           converttedvalue= temprature - 459.67;
-           resultunit= 'K';
-    }else if (tounit==='R') {
-        converttedvalue= temprature * 5/9;
-        resultunit= 'R';
+    if(toUnit === 'C'){
+        convertedvalue=(temperature - 491.67)*5/9;
+      resultUnit = 'C';
+    }else if (toUnit==='K') {
+           convertedvalue= temperature - 459.67;
+         resultUnit= 'K';
+    }else if (toUnit==='R') {
+        convertedvalue= temperature * 5/9;
+      resultUnit= 'R';
   }else  {
-    converttedvalue= temprature;
-    resultunit= 'R';
+    convertedvalue= temperature;
+  resultUnit= 'R';
 }
 break;
 
     }
+
+    document.getElementById('result').value =convertedvalue.toFixed(2) +' '+resultUnit;
 }
