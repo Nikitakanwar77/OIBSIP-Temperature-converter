@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+     font-family: 'poppins',sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(sky.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.converter{
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0,2);
+}
+
+select, input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px sold black;
+    border-radius: 5px;
+    outline: none;
+}
