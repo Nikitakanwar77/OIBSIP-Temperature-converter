@@ -84,8 +84,22 @@ button:hover{
 @media screen and (max-width:500px)
 {
     .converter{
-        width: 90%;
+        width: 70%;
     }
+    
+     select{
+        font-size: 10px;  
+     }
+
+     input{
+        font-size: 10px;
+        width: 90%;
+     }
+     #result{
+        font-size: 10px;
+        width: 80%;
+     }
+
 }
 
 @keyframes fadeIn{
